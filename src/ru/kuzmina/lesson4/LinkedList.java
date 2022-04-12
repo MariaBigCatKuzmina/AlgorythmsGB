@@ -18,7 +18,7 @@ public interface LinkedList<E>  {
 
     E getFirst();
 
-    void insert(E value, int placeq1);
+    void insert(E value, int place);
 
     class Node<E> {
         E value;

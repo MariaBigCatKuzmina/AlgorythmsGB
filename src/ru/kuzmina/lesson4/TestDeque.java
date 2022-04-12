@@ -3,6 +3,7 @@ package ru.kuzmina.lesson4;
 public class TestDeque {
     public static void main(String[] args) {
         DequeImpl<Integer> deque = new DequeImpl<>(5);
+
         deque.insertLeft(1);
         System.out.println(deque);
         deque.insertLeft(2);

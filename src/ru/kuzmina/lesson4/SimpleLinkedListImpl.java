@@ -1,6 +1,5 @@
 package ru.kuzmina.lesson4;
 
-
 import java.util.Iterator;
 
 public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
