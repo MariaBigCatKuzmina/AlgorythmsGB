@@ -3,19 +3,20 @@ package ru.kuzmina.lesson3;
 import java.util.Arrays;
 
 public class QueueImpl<E> implements Queue<E> {
-    private final Object[] arr;
-    private int first;
-    private int last;
-    private int itemsAmount;
-    private final int length;
+    protected final E[] arr;
+    protected int first;
+    protected int last;
+    protected int itemsAmount;
+    protected final int length;
 
     public QueueImpl(int length) {
         this.length = length;
         this.first = 0;
         this.last = -1;
         this.itemsAmount = 0;
-        this.arr = new Object[length];
+        this.arr = (E[]) new Object[length];
     }
+
 
     @Override
     public boolean push(E value) {
@@ -35,7 +36,7 @@ public class QueueImpl<E> implements Queue<E> {
     @Override
     public E pop() {
         if (itemsAmount > 0) {
-            E deletedValue = (E) arr[first];
+            E deletedValue = arr[first];
             arr[first] = null;
             if (first == length - 1) {
                 first = 0;
@@ -50,7 +51,7 @@ public class QueueImpl<E> implements Queue<E> {
 
     @Override
     public E peek() {
-        return (E) arr[first];
+        return arr[first];
     }
 
     @Override
